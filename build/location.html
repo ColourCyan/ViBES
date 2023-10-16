@@ -7,41 +7,48 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/customfonts.css">
     <link rel="stylesheet" href="css/backgrounds.css">
+    <script src="showhide.js"></script>
 </head>
 <body class="aerialShotManila bg-cover bg-fixed">                                  
     <!-- NavBar -->
     <nav class="flex items-center justify-between flex-wrap p-6">
-        <div class="flex items-center flex-shrink-0 text-stone-950 mr-6">
-          <img src="css/logo/logo.png" class="w-16 mr-4">
-          <span class="font-light font-style-gothicA1 text-7xl tracking-tight">V i B E S</span>
-        </div>
-        <div class="block lg:hidden">
-          <button class="flex items-center px-3 py-2 border rounded text-stone-950 border-pink-400 hover:text-white hover:border-white">
-            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-          </button>
-        </div>
-        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-          <div class="text-sm lg:flex-grow">
-            <!-- float-right makes the arrangement inverted somehow -->
-            <a href="#responsive-header" class="font-style-gothicA1 text-3xl float-right block mt-4 lg:inline-block lg:mt-0 text-stone-950 hover:text-white mr-4">
-              Updates
-            </a>
-            <a href="#responsive-header" class="font-style-gothicA1 text-3xl float-right block mt-4 lg:inline-block lg:mt-0 text-stone-950 hover:text-white mr-20">
-              About
-            </a>
-            <a href="#responsive-header" class="font-style-gothicA1 text-3xl float-right block mt-4 lg:inline-block lg:mt-0 text-stone-950 hover:text-white mr-20">
-              Locations
-            </a>
+      <div class="flex items-center flex-shrink-0 text-stone-950 mr-6">
+        <img src="css/logo/logo.png" class="lg:w-16 mr-4 sm:w-8">
+        <span class="font-light font-style-gothicA1 lg:text-7xl sm:text-4xl tracking-tight">V i B E S</span>
+      </div>
+      <div class="block lg:hidden relative">
+        <button onclick="showhideFunction()" class="float-right flex items-center px-3 py-2 border rounded text-stone-950 border-pink-200 hover:text-white hover:border-white relative">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          <div id="showhide" class="hidden text-sm lg:flex-shrink absolute right-0 top-0 w-30 bg-white transition-all duration-300 mt-10 p-4 rounded shadow-md">
+            <a href="index.html" class="font-style-gothicA1 sm:text-xs block mt-2 text-stone-950 hover:text-white">Home</a>
+            <a href="#" class="font-style-gothicA1 sm:text-xs block mt-2 text-gray-500 hover:text-white">Locations</a>
+            <a href="#responsive-header" class="font-style-gothicA1 sm:text-xs block mt-2 text-stone-950 hover:text-white">About</a>
+            <a href="#responsive-header" class="font-style-gothicA1 sm:text-xs block mt-2 text-stone-950 hover:text-white">Updates</a>
           </div>
+        </button>
+      </div>
+      </div>     
+      <div class="md:hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm lg:flex-grow">
+          <!-- float-right makes the arrangement inverted somehow -->
+          <a href="#responsive-header" class="font-style-gothicA1 text-3xl float-right block mt-4 lg:inline-block lg:mt-0 text-stone-950 hover:text-white mr-4">
+            Updates
+          </a>
+          <a href="#responsive-header" class="font-style-gothicA1 text-3xl float-right block mt-4 lg:inline-block lg:mt-0 text-stone-950 hover:text-white mr-20">
+            About
+          </a>
+          <a href="#" class="font-style-gothicA1 text-3xl float-right block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-white mr-20">
+            Locations
+          </a>
+          <a href="index.html" class="font-style-gothicA1 text-3xl float-right block mt-4 lg:inline-block lg:mt-0 text-stone-950 hover:text-white mr-20">
+            Home
+          </a>
         </div>
-      </nav>                                 
+      </div>
+    </nav>                                 
     <!-- /NavBar -->
     <!-- Actual Body -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <!-- Add other necessary libraries here -->
-    <script src="your_script.js"></script>
-    <!-- Actual Body -->
-    <div class="flex flex-row place-content-center">
+    <div class="lg:flex lg:flex-row lg:place-content-center">
       <!-- First Item -->
       <div class="p-5">
         <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
@@ -50,9 +57,9 @@
               <img class="h-48 w-full object-cover md:h-full md:w-48" src="./css/backgroundimg/2-trinoma.jpg" alt="Trinoma Mall">
             </div>
             <div class="p-8">
-              <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Trinoma</div>
-              <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Data Collected: # respondents</a>
-              <p class="mt-2 text-slate-500">A sanctuary of retail and relaxation north of the metropolis. TriNoma is characterized by the convergence of spacious interiors, soothing landscapes, and of course, diverse shopping, dining, and entertainment options.</p>
+              <div class="uppercase tracking-wide sm:text-xs lg:text-sm text-indigo-500 font-semibold">Trinoma</div>
+              <div class="block mt-1 sm:text-xs lg:text-lg leading-tight font-medium text-black hover:underline">2/F Trinoma Mall 173, Quezon City, 1105 Metro Manila</div>
+              <p class="mt-2 text-slate-500 sm:text-xs lg:text-base">A sanctuary of retail and relaxation north of the metropolis. TriNoma is characterized by the convergence of spacious interiors, soothing landscapes, and of course, diverse shopping, dining, and entertainment options.</p>
             </div>
           </div>
         </div>
@@ -65,15 +72,15 @@
               <img class="h-48 w-full object-cover md:h-full md:w-48" src="./css/backgroundimg/SMNorthEdsa.jpg" alt="SM City North EDSA">
             </div>
             <div class="p-8">
-              <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">SM City North EDSA</div>
-              <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Data Collected: # respondents</a>
-              <p class="mt-2 text-slate-500">It is the first SM Supermall in the country and formerly the largest shopping mall in the Philippines from 2008 to 2011, circa 2014, and from 2015 to 2021. SM North EDSA is owned and operated by SM Prime Holdings.</p>
+              <div class="uppercase tracking-wide sm:text-xs lg:text-sm text-indigo-500 font-semibold">SM City North EDSA</div>
+              <div class="block mt-1 sm:text-xs lg:text-lg leading-tight font-medium text-black hover:underline">North Avenue, corner Epifanio de los Santos Ave, Quezon City, 1100 Metro Manila</div>
+              <p class="mt-2 text-slate-500 sm:text-xs lg:text-base">It is the first SM Supermall in the country and formerly the largest shopping mall in the Philippines from 2008 to 2011, circa 2014, and from 2015 to 2021. SM North EDSA is owned and operated by SM Prime Holdings.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="flex flex-row place-content-center">
+    <div class="lg:flex lg:flex-row lg:place-content-center">
       <!-- Third Item -->
       <div class="p-5">
         <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
@@ -82,9 +89,9 @@
               <img class="h-48 w-full object-cover md:h-full md:w-48" src="./css/backgroundimg/Aerial-shot-of-Quezon-Memorial-Circle.-Photo-by-Mark-Balmores-Manila-Bulletin.jpg" alt="Quezon Memorial Circle">
             </div>
             <div class="p-8">
-              <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Quezon Memorial Circle</div>
-              <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Data Collected: # respondents</a>
-              <p class="mt-2 text-slate-500">The park is located inside a large traffic circle in the shape of an ellipse and bounded by the Elliptical Road. Its main feature is a 66-meter (217 ft) tall mausoleum containing the remains of Manuel L. Quezon</p>
+              <div class="uppercase tracking-wide sm:text-xs lg:text-sm text-indigo-500 font-semibold">Quezon Memorial Circle</div>
+              <div class="block mt-1 sm:text-xs lg:text-lg leading-tight font-medium text-black hover:underline">Quezon Memorial Cir Elliptical Rd Underpass, Diliman, Quezon City, Metro Manila</div>
+              <p class="mt-2 text-slate-500 sm:text-xs lg:text-base">The park is located inside a large traffic circle in the shape of an ellipse and bounded by the Elliptical Road. Its main feature is a 66-meter (217 ft) tall mausoleum containing the remains of Manuel L. Quezon</p>
             </div>
           </div>
         </div>
@@ -97,9 +104,9 @@
               <img class="h-48 w-full object-cover md:h-full md:w-48" src="./css/backgroundimg/Ninoy_Aquino_Parks_and_Wildlife_Center_Quezon_Avenue,_Quezon_City;_03-20-2021.jpg" alt="Ninoy Aquino Parks and Wildlife Center">
             </div>
             <div class="p-8">
-              <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Ninoy Aquino Parks and Wildlife Center</div>
-              <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Data Collected: # respondents</a>
-              <p class="mt-2 text-slate-500">The Ninoy Aquino Parks and Wildlife Center (NAPWC) lies in the heart of Quezon City. It serves as an oasis in a highly urbanized environment where various species of flora and fauna can be found.</p>
+              <div class="uppercase tracking-wide sm:text-xs lg:text-sm text-indigo-500 font-semibold">Ninoy Aquino Parks and Wildlife Center</div>
+              <div class="block mt-1 sm:text-xs lg:text-lg leading-tight font-medium text-black hover:underline">Elliptical Road, Bagong Pag-asa, Quezon City, Metro Manila</div>
+              <p class="mt-2 text-slate-500 sm:text-xs lg:text-base">The Ninoy Aquino Parks and Wildlife Center (NAPWC) lies in the heart of Quezon City. It serves as an oasis in a highly urbanized environment where various species of flora and fauna can be found.</p>
             </div>
           </div>
         </div>
@@ -113,38 +120,38 @@
     <!-- Space Between Body and Footer -->
     <!-- Footer -->
     <footer class="bg-pink-200">
-      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-3 lg:py-8">
           <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="https://flowbite.com/" class="flex items-center">
-                  <img src="css/logo/logo.png" class="w-3/12">
+                  <img class="lg:w-16 mr-4 sm:w-16" src="css/logo/logo.png" class="w-3/12">
                 </a>
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                    <h2 class="mb-6 lg:text-2xl sm:text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                     <ul class="text-gray-500 dark:text-gray-400 font-medium">
                         <li>
-                            <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                            <a href="https://tailwindcss.com/" class="hover:underline lg:text-lg sm:text-xs">Tailwind CSS</a>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact us</h2>
+                    <h2 class="mb-6 lg:text-2xl sm:text-sm font-semibold text-gray-900 uppercase">Contact us</h2>
                     <ul class="text-gray-500 dark:text-gray-400 font-medium">
                         <li class="mb-4">
-                            <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                            <a href="https://github.com/themesberg/flowbite" class="hover:underline lg:text-lg sm:text-xs">Github</a>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                    <h2 class="mb-6 lg:text-2xl sm:text-sm font-semibold text-gray-900 uppercase">Legal</h2>
                     <ul class="text-gray-500 dark:text-gray-400 font-medium">
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Privacy Policy</a>
+                            <a href="#" class="hover:underline lg:text-lg sm:text-xs">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                            <a href="#" class="hover:underline lg:text-lg sm:text-xs">Terms &amp; Conditions</a>
                         </li>
                     </ul>
                 </div>

@@ -1,0 +1,15 @@
+/* Sliding from right to left */
+.sliding-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially off-screen to the right */
+    width: 300px; /* Adjust this width as needed */
+    height: 100%;
+    background-color:  rgb(251 207 232); /* Background color of the sliding menu */
+    transition: right 0.3s ease-in-out; /* Transition for smooth sliding */
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+
+  .sliding-menu.show {
+    right: 0; /* Show the menu by moving it to the right */
+  }
