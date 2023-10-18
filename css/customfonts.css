@@ -1,0 +1,18 @@
+@font-face {
+    font-family: gothicA1;
+    src: url(fonts/GothicA1-Regular.ttf);
+}
+
+@font-face {
+    font-family: balthazar;
+    src: url(fonts/Balthazar-Regular.ttf);
+}
+
+.font-style-gothicA1{
+    font-family: gothicA1;
+}
+
+.font-style-balthazar{
+    font-family: balthazar;
+}
+
