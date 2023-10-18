@@ -3,5 +3,5 @@
   "builds": [
     { "src": "package.json", "use": "@vercel/node" }
   ],
-  "output": "index.html"
+  "output": "build/index.html"
 }
