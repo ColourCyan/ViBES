@@ -1,12 +1,28 @@
-// 3rd-Party Libraries
-require("./public/scripts/showhide.js");
+const express = require("express");
+const path = require("path");
+const app = express();
 
-// Styles
-require("./public/css/backgrounds.css");
-require("./public/css/customanimations.css");
-require("./public/css/customfonts.css");
-require("./public/css/style.css");
+const PORT = process.env.PORT || 3000;
 
-// Fonts
-require("./public/fonts/Balthazar-Regular.ttf");
-require("./public/fonts/GothicA1-Regular.ttf");
+// Static files
+app.use(express.static(path.join(__dirname, "public")));
+
+/**
+ * This middleware will make the server serve the html files
+ * without the extension.
+ *
+ * For example, if you have a file called about.html, you can
+ * access it by going to http://localhost:3000/about
+ */
+app.use((req, res, next) => {
+  if (path.extname(req.path).length === 0) {
+    const file = path.join(__dirname, "public", `${req.path}.html`);
+    express.static(file)(req, res, next);
+  } else {
+    next();
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
